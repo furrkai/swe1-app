@@ -5,9 +5,11 @@ python:
 
 install:
   - pip install -r requirements.txt
+  - pip install black
 
 before_script:
   - python manage.py migrate
 
 script:
   - python manage.py
+  - black . --check
