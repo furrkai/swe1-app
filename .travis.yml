@@ -13,3 +13,4 @@ before_script:
 script:
   - python manage.py
   - black . --check
+  - flake8 --max-line-length=92
